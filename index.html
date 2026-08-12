@@ -229,39 +229,380 @@
     <!-- Pengalaman Kerja Proyek End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
-            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Project Terbaru</h2>
-          </div>
+    <section id="portfolio" class="bg-slate-100 pt-24 pb-16 dark:bg-slate-800 sm:pt-28 lg:pt-36">
+
+      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Portfolio Header -->
+        <div class="mx-auto mb-10 w-full max-w-2xl text-center sm:mb-12 lg:mb-16">
+
+          <h4 class="mb-2 text-base font-semibold uppercase text-primary sm:text-lg">
+            Portfolio
+          </h4>
+
+          <h2 class="mb-4 text-2xl font-bold leading-tight text-dark dark:text-white sm:text-3xl lg:text-5xl">
+            Proyek & Pencapaian
+          </h2>
+
+          <p class="text-sm font-medium leading-relaxed text-secondary sm:text-base lg:text-lg">
+            Kumpulan sistem dan solusi teknologi yang saya kembangkan untuk
+            memecahkan masalah operasional bisnis.
+          </p>
+
         </div>
 
-        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/dashboard ppob.png" alt="Landing Page" class="w-full" />
+
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 gap-6 sm:gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
+
+          <!-- ====================================================== -->
+          <!-- PROYEK 1 -->
+          <!-- ====================================================== -->
+
+          <article class="flex min-w-0 w-full">
+
+            <div class="flex w-full min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-700">
+
+              <!-- Image -->
+              <div class="h-48 w-full overflow-hidden sm:h-52">
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop"
+                  alt="WhatsApp Automated System"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+
+                <h3 class="mb-3 break-words text-lg font-bold leading-snug text-dark dark:text-white sm:text-xl">
+                  Sistem Klaim & Notifikasi WhatsApp Otomatis
+                </h3>
+
+                <p class="mb-5 break-words text-sm font-medium leading-relaxed text-secondary dark:text-slate-300">
+                  Membangun sistem
+                  <span class="italic">backend</span>
+                  logistik untuk menangani paket hilang (Resi).
+                  Sistem ini memproses logika SQL secara dinamis menggunakan
+                  <span class="font-bold text-primary">TIMESTAMPDIFF/DATEDIFF</span>
+                  untuk menghitung dan melacak batas waktu klaim 14 hari,
+                  lalu secara otomatis menghasilkan link klaim (via bit.ly)
+                  dan mengirimkan
+                  <span class="italic">template</span>
+                  notifikasi WhatsApp ke pelanggan.
+                </p>
+
+                <div class="mt-auto flex flex-wrap gap-2 text-xs font-semibold text-primary">
+                  <span class="rounded bg-primary/10 px-2 py-1">PHP</span>
+                  <span class="rounded bg-primary/10 px-2 py-1">MySQL</span>
+                  <span class="rounded bg-primary/10 px-2 py-1">REST API</span>
+                </div>
+
+              </div>
+
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Membuat Dashboard 3PL Dashboard Menggunakan Next Js dan Type Script</h3>
-            <p class="text-base font-medium text-secondary">
-              <a href="https://dashboard-3pl.vercel.app/" target="_blank" class="text-secondary hover:text-primary">https://dashboard-3pl.vercel.app/</a>
-            </p>
-          </div>
+
+          </article>
+
+
+          <!-- ====================================================== -->
+          <!-- PROYEK 2 -->
+          <!-- ====================================================== -->
+
+          <article class="flex min-w-0 w-full">
+
+            <div class="flex w-full min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-700">
+
+              <!-- Image -->
+              <div class="h-48 w-full overflow-hidden sm:h-52">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                  alt="HRIS System"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+
+                <h3 class="mb-3 break-words text-lg font-bold leading-snug text-dark dark:text-white sm:text-xl">
+                  Refaktor Sistem Kehadiran & Laporan Karyawan
+                </h3>
+
+                <p class="mb-5 break-words text-sm font-medium leading-relaxed text-secondary dark:text-slate-300">
+                  Menulis ulang arsitektur pelacakan absensi untuk menangani
+                  status kehadiran yang kompleks (Sakit, Alpha, Ijin, Cuti)
+                  beserta hari libur dinamis.
+                  Menerapkan ketelitian tinggi pada pelaporan data,
+                  seperti standardisasi mapping hari khusus
+                  (Index 7 untuk Minggu, 1-6 untuk Senin-Sabtu)
+                  dan pembersihan string antarmuka dari status
+                  "Diaktifkan" menjadi "Aktif" agar laporan lebih profesional
+                  dan mudah dibaca oleh manajemen.
+                </p>
+
+                <div class="mt-auto flex flex-wrap gap-2 text-xs font-semibold text-primary">
+                  <span class="rounded bg-primary/10 px-2 py-1">
+                    SQL Optimization
+                  </span>
+
+                  <span class="rounded bg-primary/10 px-2 py-1">
+                    Backend Logic
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- ====================================================== -->
+          <!-- PROYEK 3 -->
+          <!-- ====================================================== -->
+
+          <article class="flex min-w-0 w-full">
+
+            <div class="flex w-full min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-700">
+
+              <!-- Image -->
+              <div class="h-48 w-full overflow-hidden sm:h-52">
+                <img
+                  src="https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=800&auto=format&fit=crop"
+                  alt="Docker Container"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+
+                <h3 class="mb-3 break-words text-lg font-bold leading-snug text-dark dark:text-white sm:text-xl">
+                  Containerization Layanan Bot Qontak
+                </h3>
+
+                <p class="mb-5 break-words text-sm font-medium leading-relaxed text-secondary dark:text-slate-300">
+                  Melakukan manajemen dan orkestrasi infrastruktur aplikasi
+                  menggunakan Docker dan Docker Compose.
+                  Mengoptimalkan konfigurasi
+                  <span class="font-bold text-primary">
+                    docker-compose.yaml
+                  </span>
+                  untuk men-deploy layanan bot ruang ritel Qontak secara efisien
+                  di dalam environment Linux, memastikan
+                  <span class="italic">uptime</span>
+                  yang tinggi dan kemudahan pemeliharaan aplikasi.
+                </p>
+
+                <div class="mt-auto flex flex-wrap gap-2 text-xs font-semibold text-primary">
+                  <span class="rounded bg-primary/10 px-2 py-1">Docker</span>
+                  <span class="rounded bg-primary/10 px-2 py-1">Linux</span>
+                  <span class="rounded bg-primary/10 px-2 py-1">DevOps</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- ====================================================== -->
+          <!-- PROYEK 4 -->
+          <!-- ====================================================== -->
+
+          <article class="flex min-w-0 w-full">
+
+            <div class="flex w-full min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-700">
+
+              <!-- Image -->
+              <div class="h-48 w-full overflow-hidden sm:h-52">
+                <img
+                  src="dist/img/portfolio/dashboard ppob.png"
+                  alt="Dashboard 3PL"
+                  loading="lazy"
+                  class="h-full w-full border-b border-slate-200 object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+
+                <h3 class="mb-3 break-words text-lg font-bold leading-snug text-dark dark:text-white sm:text-xl">
+                  Dashboard Pemantauan Operasional 3PL
+                </h3>
+
+                <p class="mb-5 break-words text-sm font-medium leading-relaxed text-secondary dark:text-slate-300">
+                  Pengembangan
+                  <span class="italic">frontend dashboard</span>
+                  modern untuk pemantauan layanan logistik pihak ketiga (3PL).
+                  Menggunakan teknologi terbaru untuk menyajikan data yang cepat
+                  dan interaktif.
+                </p>
+
+                <div class="mt-auto flex flex-col gap-3">
+
+                  <a
+                    href="https://dashboard-3pl.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 break-words text-sm font-semibold text-primary hover:underline"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Kunjungi Website</span>
+                  </a>
+
+                  <div class="flex flex-wrap gap-2 text-xs font-semibold text-primary">
+                    <span class="rounded bg-primary/10 px-2 py-1">
+                      Next.js
+                    </span>
+
+                    <span class="rounded bg-primary/10 px-2 py-1">
+                      TypeScript
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- ====================================================== -->
+          <!-- PROYEK 5 -->
+          <!-- ====================================================== -->
+
+          <article class="flex min-w-0 w-full">
+
+            <div class="flex w-full min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-700">
+
+              <!-- Image -->
+              <div class="h-48 w-full overflow-hidden sm:h-52">
+                <img
+                  src="dist/img/portfolio/Swagger UI API Contract.png"
+                  alt="Swagger API UI"
+                  loading="lazy"
+                  class="h-full w-full border-b border-slate-200 object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+
+                <h3 class="mb-3 break-words text-lg font-bold leading-snug text-dark dark:text-white sm:text-xl">
+                  Dokumentasi API Contract (Swagger)
+                </h3>
+
+                <p class="mb-5 break-words text-sm font-medium leading-relaxed text-secondary dark:text-slate-300">
+                  Merancang dan membangun antarmuka pemrograman aplikasi (API)
+                  yang terstruktur lengkap dengan dokumentasi interaktif
+                  Swagger UI untuk memudahkan integrasi sistem lintas platform.
+                </p>
+
+                <div class="mt-auto flex flex-col gap-3">
+
+                  <a
+                    href="https://api-contract-sims-ppobsigit-jarkasih-production.up.railway.app/api/v1/docs/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 break-words text-sm font-semibold text-primary hover:underline"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Lihat Dokumentasi API</span>
+                  </a>
+
+                  <div class="flex flex-wrap gap-2 text-xs font-semibold text-primary">
+                    <span class="rounded bg-primary/10 px-2 py-1">
+                      Node.js
+                    </span>
+
+                    <span class="rounded bg-primary/10 px-2 py-1">
+                      Express
+                    </span>
+
+                    <span class="rounded bg-primary/10 px-2 py-1">
+                      Swagger
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- ====================================================== -->
+          <!-- PROYEK 6 -->
+          <!-- ====================================================== -->
+
+          <article class="flex min-w-0 w-full">
+
+            <div class="flex w-full min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-slate-700">
+
+              <!-- Image -->
+              <div class="h-48 w-full overflow-hidden sm:h-52">
+                <img
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+                  alt="Vue Quasar Frontend"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+
+                <h3 class="mb-3 break-words text-lg font-bold leading-snug text-dark dark:text-white sm:text-xl">
+                  Modul Verifikasi Dokumen Pelanggan
+                </h3>
+
+                <p class="mb-5 break-words text-sm font-medium leading-relaxed text-secondary dark:text-slate-300">
+                  Membangun halaman antarmuka verifikasi dokumen pelanggan
+                  (<span class="italic">custVerifyDocs</span>) yang responsif.
+                  Mengimplementasikan komponen form yang dinamis seperti
+                  form input dan validasi untuk mempercepat proses
+                  <span class="italic">on-boarding</span>
+                  dan pengecekan keabsahan data pengguna.
+                </p>
+
+                <div class="mt-auto flex flex-wrap gap-2 text-xs font-semibold text-primary">
+
+                  <span class="rounded bg-primary/10 px-2 py-1">
+                    Vue.js
+                  </span>
+
+                  <span class="rounded bg-primary/10 px-2 py-1">
+                    Quasar Framework
+                  </span>
+
+                  <span class="rounded bg-primary/10 px-2 py-1">
+                    Frontend
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
         </div>
 
-        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="overflow-hidden rounded-md shadow-md">
-              <img src="dist/img/portfolio/Swagger UI API Contract.png" alt="Landing Page" class="w-full" />
-            </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Membuat API Contract Menggunakan Node JS dan Express</h3>
-            <p class="text-base font-medium text-secondary">
-              <a href="https://api-contract-sims-ppobsigit-jarkasih-production.up.railway.app/api/v1/docs/" target="_blank" class="text-secondary hover:text-primary break-all">https://api-contract-sims-ppobsigit-jarkasih-production.up.railway.app/api/v1/docs/</a>
-            </p>
-          </div>
-        </div>
       </div>
+
     </section>
     <!-- Portfolio Section End -->
 
